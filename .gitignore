@@ -1,0 +1,3 @@
+tools/audit/fast.so
+__pycache__/
+dist/
