@@ -212,3 +212,40 @@ def texture_name(fmt, w, h, data, pal=b"", mipmapped=False):
         lo, hi = palette_range(data, fmt)
         name += "_%016x" % xxh64(pal[2 * lo:2 * (hi + 1)])
     return "%s_%d" % (name, fmt)
+
+
+def j3d_textures(d):
+    """(name, offset of its header in d) of each texture in a J3D model or material table."""
+    if d[:4] != b"J3D2":
+        return []
+    pos = 0x20
+    for _ in range(struct.unpack(">I", d[0xC:0x10])[0]):
+        if pos + 8 > len(d):
+            break
+        ln = struct.unpack(">I", d[pos + 4:pos + 8])[0]
+        if ln < 8:
+            break
+        if d[pos:pos + 4] == b"TEX1":
+            count, hdr, names = struct.unpack(">H", d[pos + 8:pos + 10])[0], *struct.unpack(">II", d[pos + 0xC:pos + 0x14])
+            tab = pos + names
+            out = []
+            for i in range(count):
+                o = tab + struct.unpack(">H", d[tab + 6 + 4 * i:tab + 8 + 4 * i])[0]
+                out.append((d[o:d.index(b"\0", o)].decode("latin1"), pos + hdr + 0x20 * i))
+            return out
+        pos += ln
+    return []
+
+
+def find_texture(disc, archive, member, texture="", cache={}):
+    """The texture `texture` of model `member` (or the .bti `member` itself) in `archive`."""
+    if archive not in cache:
+        cache.clear()
+        cache[archive] = dict(rarc(disc.read(archive)))
+    d = yaz0(cache[archive][member])
+    if not texture:
+        return bti_texture(d, 0)
+    for name, off in j3d_textures(d):
+        if name == texture:
+            return bti_texture(d, off)
+    raise KeyError("%s has no texture %s" % (member, texture))

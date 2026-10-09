@@ -1,0 +1,231 @@
+# kind	archive	file	texture (in a model)	note
+ui	data/nintendo.szs	/timg/nintendo.bti		NINTENDO GAMECUBE logo (boot)
+ui	data/nintendo.szs	/timg/title_m_mark.bti		"M" mark (boot)
+ui	data/common.szs	/2d/wipe_gameover.bti		GAME OVER
+ui	data/common.szs	/timg/a_bill01.bti		billboard
+ui	data/common.szs	/timg/a_bill02.bti		billboard
+ui	data/common.szs	/timg/arrow.bti		arrow
+ui	data/endsave.szs	/timg/end_text_1.bti		THE END
+ui	data/endsave.szs	/timg/end_text_2.bti		Have a relaxing vacation!
+ui	data/game_6.szs	/timg/monte_icon.bti		Pianta counter icon (Piantas in Need)
+ui	data/game_6.szs	/timg/balloon_icon.bti		balloon counter icon (Pinna Park)
+ui	data/game_6.szs	/timg/big_tx_y.bti		big banner letter Y
+ui	data/game_6.szs	/timg/juice_text_0.bti		FRUIT (Yoshi juice gauge)
+ui	data/game_6.szs	/timg/juice_surface.bti		Yoshi juice gauge surface
+ui	data/game_6.szs	/timg/water_text.bti		TANK (FLUDD gauge)
+ui	data/game_6.szs	/timg/message_window.bti		message window corner
+ui	data/guide.szs	/timg/guide_back.bti		pause guide background
+ui	data/guide.szs	/timg/guide_arrow.bti		pause guide arrow
+ui	data/guide.szs	/timg/guide_blue_coin.bti		pause guide blue coin
+ui	data/guide.szs	/timg/guide_sc_mark_0.bti		pause guide Shine mark
+ui	data/guide.szs	/timg/guide_sc_mark_1.bti		pause guide Shine mark
+ui	data/guide.szs	/timg/guide_x.bti		pause guide x
+ui	data/guide.szs	/timg/guide_map_dolphic.bti		pause guide: Delfino Plaza map
+ui	data/guide.szs	/timg/guide_map_pinna.bti		pause guide: Pinna Park map
+ui	data/guide.szs	/timg/guide_picture_00.bti		pause guide picture 0
+ui	data/guide.szs	/timg/guide_picture_01.bti		pause guide picture 1
+ui	data/guide.szs	/timg/guide_picture_02.bti		pause guide picture 2
+ui	data/guide.szs	/timg/guide_picture_03.bti		pause guide picture 3
+ui	data/guide.szs	/timg/guide_picture_04.bti		pause guide picture 4
+ui	data/guide.szs	/timg/guide_picture_05.bti		pause guide picture 5
+ui	data/guide.szs	/timg/guide_picture_06.bti		pause guide picture 6
+ui	data/guide.szs	/timg/guide_picture_07.bti		pause guide picture 7
+ui	data/guide.szs	/timg/guide_picture_08.bti		pause guide picture 8
+ui	data/guide.szs	/timg/guide_picture_09.bti		pause guide picture 9
+ui	data/guide.szs	/timg/guide_picture_10.bti		pause guide picture 10
+ui	data/guide.szs	/timg/guide_picture_11.bti		pause guide picture 11
+ui	data/guide.szs	/timg/guide_picture_12.bti		pause guide picture 12
+ui	data/option.szs	/timg/bluecoin_icon2.bti		file select blue coin
+ui	data/option.szs	/timg/monte_head6.bti		file select Pianta head
+ui	data/option.szs	/timg/monte_sunglass_flame.bti		file select sunglasses frame
+ui	data/option.szs	/timg/monte_sunglass_glass.bti		file select sunglasses glass
+ui	data/option.szs	/timg/option_sunglass.bti		options sunglasses
+ui	data/option.szs	/timg/windows_bubble02.bti		speech bubble
+ui	data/select.szs	/timg/sc_map_corona.bti		episode select: Corona Mountain banner
+ui	data/select.szs	/timg/sc_mark_0.bti		episode select Shine mark
+ui	data/title.szs	/timg/pushstart.bti		PUSH START
+model	data/common.szs	/map/wirefitting.bmd	B_denemon	
+model	data/mario.szs	/watergun2/yoshi_wg/yoshi_wg.bmd	H_yoshi_wg_main_s3tc	
+model	data/scene/airport0.szs	/fruitsboatb/shipdolpic2.bmd	B_KAGEtoon	
+model	data/scene/airport0.szs	/kinojii/kinoji_stick.bmd	N_kinoji_stick	
+model	data/scene/airport0.szs	/kinopio/kinopio_body.bmd	N_kinopio_kuti_half	
+model	data/scene/airport0.szs	/kinopio/kinopio_body.bmd	N_kinopio_kuti_open	
+model	data/scene/airport0.szs	/kinopio/kinopio_body.bmd	N_kinopio_kuti_wet	
+model	data/scene/airport0.szs	/map/map/map.bmd	B_windowsky	
+model	data/scene/airport0.szs	/map/map/map.bmd	A_portyane02	
+model	data/scene/airport0.szs	/mapobj/bottle_large.bmd	J_bottle_L	
+model	data/scene/airport0.szs	/mapobj/normalblock.bmd	B_NomalBlock	
+model	data/scene/airport0.szs	/mapobj/nozzleitem.bmt	H_watergun_main_s3tc	
+model	data/scene/airport0.szs	/peach/peach_hair_ponytail.bmd	H_peach_ponytail_s3tc	
+model	data/scene/airport0.szs	/peach/peach_model.bmd	H_peach_eye05_s3tc	
+model	data/scene/bia_ex1.szs	/map/map/map.bmd	B_mokume_white2	
+model	data/scene/bia_ex1.szs	/map/map/map.bmd	B_ikaracePipe	
+model	data/scene/bianco0.szs	/gorogoro/bosspaku_head.bmd	pakkun_head	
+model	data/scene/bianco0.szs	/kbosspakkun/bosspaku_model.bmd	pakkun_3	
+model	data/scene/bianco0.szs	/map/map/reflectparts.bmd	D_kabe_bia6Ref	
+model	data/scene/bianco0.szs	/pakkun/pakun.bmd	K_pakun	
+model	data/scene/bianco0.szs	/pakkun/seed.bmd	K_seed_leaf	
+model	data/scene/bianco0.szs	/sambohead/sambohead.bmd	K_Sflower_orange	
+model	data/scene/bianco0.szs	/sambohead/yumbo.bmd	K_Sflower_blue	
+model	data/scene/bianco2.szs	/bird/bird_man.bmd	N_bird_body_32	
+model	data/scene/bianco2.szs	/bird/bird_man.bmd	N_bird_eye	
+model	data/scene/bianco3.szs	/kazekun/kazekun.bmd	H_kazekun_body	
+model	data/scene/bianco4.szs	/bosspakkun/bosspaku_end.bmd	pakkun_3	
+model	data/scene/bianco5.szs	/beehive/bee_body.bmd	N_bee_body32	
+model	data/scene/bianco5.szs	/beehive/bee_body.bmd	N_bee_wing	
+model	data/scene/bianco5.szs	/beehive/bee_nest.bmd	N_bee_nest	
+model	data/scene/bianco5.szs	/beehive/bee_nest_break.bmd	N_bee_nest_hole32	
+model	data/scene/bianco5.szs	/mapobj/eggyoshi_fukidashi.bmd	H_eggFukidashi_durian	
+model	data/scene/biancoBoss.szs	/map/map/map.bmd	D_wall00_IW	
+model	data/scene/biancoBoss.szs	/map/targetarrow/targetarrow_red.bmd	H_targetArrow_red_16rgba	
+model	data/scene/casino0.szs	/map/map/map.bmd	L_casino_sora00	
+model	data/scene/casino0.szs	/map/map/map.bmd	L_casino_carcle00	
+model	data/scene/casino0.szs	/mapobj/casino_lighting.bmd	P_casino_shine4	
+model	data/scene/casino0.szs	/mapobj/srotdram.bmd	L_neon_ster	
+model	data/scene/coro_ex0.szs	/mapobj/allpurposeboardb.bmd	B_board_B	
+model	data/scene/coro_ex0.szs	/mapobj/allpurposeboardr.bmd	B_board_R	
+model	data/scene/coro_ex2.szs	/map/map/sky.bmd	B_crasicmario	
+model	data/scene/coro_ex4.szs	/hamukuril/default.bmd	Q_hamugrid_damage_mip_s3tc	
+model	data/scene/coro_ex4.szs	/hamukuril/default.bmd	Q_hamugrid_hp_mip_s3tc	
+model	data/scene/coro_ex4.szs	/hamukuril/default.bmd	Q_hamugrid_dead_mip_s3tc	
+model	data/scene/coro_ex4.szs	/hamukuril/generator_model1.bmd	B_w2	
+model	data/scene/coronaBoss.szs	/bathtubkiller/bathtubkiller_model1.bmd	Q_killer2_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/ahiru_peach.bmd	H_peach_eye01_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_hair_ponytail.bmd	H_peach_ponytail_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_model.bmd	H_peach_main_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_model.bmd	H_peachDemo_blue_env_16rgb	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_model.bmd	H_peach_mouse01_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_model.bmd	H_peach_eye02_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_model.bmd	H_peach_eye03_s3tc	
+model	data/scene/coronaBoss.szs	/bathtubpeach/peach_parasol.bmd	H_peach_parasol_main_16rgba	
+model	data/scene/coronaBoss.szs	/explosion/10_bomb.bmd	P_magmared2	
+model	data/scene/coronaBoss.szs	/map/map/ball.bdl	stn040	
+model	data/scene/delfino0.szs	/map/map/reflectparts.bmd	L_delps_tex01	
+model	data/scene/delfino0.szs	/map/map/reflectparts.bmd	doorH	
+model	data/scene/delfino0.szs	/map/map/reflectparts.bmd	J_hana	
+model	data/scene/delfino0.szs	/mapobj/door.bmd	H_door_A_s3tc	
+model	data/scene/delfino0.szs	/mapobj/telesablock.bmd	K_telesa_eye	
+model	data/scene/delfino1.szs	/debutelesa/debutelesa.bmd	K_debutelesa_eye	
+model	data/scene/delfino1.szs	/debutelesa/debutelesa.bmd	K_debutelesa_mouth	
+model	data/scene/delfino1.szs	/map/map/map.bmd	L_teppan	
+model	data/scene/delfino1.szs	/mapobj/panelbreak.bmd	L_puraban_hibi	
+model	data/scene/delfino1.szs	/montemg/mop_model.bmd	I_mop_s3tc	
+model	data/scene/delfinoBoss.szs	/bombhei/nejibomb_model1.bmd	Q_nejibomb_s3tc	
+model	data/scene/delfinoBoss.szs	/bombhei/nejibomb_model1.bmd	Q_stop_nejibomb_s3tc	
+model	data/scene/delfinoBoss.szs	/bombhei/nejibomb_model1.bmd	Q_nejibomb_txanm1_s3tc	
+model	data/scene/delfinoBoss.szs	/bombhei/nejibomb_model1.bmd	Q_nejibomb_txanm2_s3tc	
+model	data/scene/delfinoBoss.szs	/bombhei/nejibomb_model1.bmd	Q_nejibomb_txanm3_s3tc	
+model	data/scene/delfinoBoss.szs	/btelesa/btelesa.bmd	N_btelesa_body	
+model	data/scene/delfinoBoss.szs	/btelesa/btelesa_ball.bmd	N_btelesa_ball	
+model	data/scene/dolpic0.szs	/fruitsboat/shipdolpic2.bmd	B_ship2	
+model	data/scene/dolpic0.szs	/map/map/map.bmd	A_silver_b2_env	
+model	data/scene/dolpic10.szs	/raccoondog/tanuki.bmd	J_tanuki_eye1	
+model	data/scene/dolpic10.szs	/raccoondog/tanuki.bmd	J_tanuki_eye2	
+model	data/scene/dolpic10.szs	/raccoondog/tanuki.bmd	J_tanuki_eye3	
+model	data/scene/dolpic7.szs	/mapobj/koopajrsubmarine.bmd	B_DEMOsubmarine	
+model	data/scene/dolpic9.szs	/map/map/map.bmd	A_manhole_s9	
+model	data/scene/dolpic9.szs	/map/map/map.bmd	A_yuka_s9	
+model	data/scene/dolpic9.szs	/map/map/map.bmd	A_dpt_corona	
+model	data/scene/dolpic9.szs	/map/map/map.bmd	A_objB_09m	
+model	data/scene/dolpic_ex0.szs	/mapobj/buoy.bmd	B_buoy	
+model	data/scene/dolpic_ex3.szs	/map/map/map.bmd	B_mokume_darkS	
+model	data/scene/dolpic_ex3.szs	/map/map/map.bmd	B_Sougen_hashi	
+model	data/scene/mam_ex1.szs	/map/map/map.bmd	A_joheki02	
+model	data/scene/mam_ex1.szs	/map/map/map.bmd	A_isiita01	
+model	data/scene/mam_ex1.szs	/mapobj/sandbomb.bmd	M_ha01	
+model	data/scene/mam_ex1.szs	/mapobj/sandbomb.bmd	M_bom_eye	
+model	data/scene/mam_ex1.szs	/mapobj/sandbomb.bmd	M_bom_mouth02	
+model	data/scene/mam_ex1.szs	/mapobj/sandbomb.bmd	M_ha01	
+model	data/scene/mam_ex1.szs	/mapobj/sandleaf.bmd	M_SandLeaf	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	D_brock_ma3Ref	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	D_kusagake_manRef	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	coronaRef	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	D_YellowWoody_mamRef	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	D_THouseARoofRef	
+model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	detailTHBRef	
+model	data/scene/mamma1.szs	/sleepbosshanachan/demohanatyan_model.bmd	M_hanaface_small	
+model	data/scene/mamma1.szs	/sleepbosshanachan/demohanatyan_model.bmd	hanaeye_close2	
+model	data/scene/mamma1.szs	/sleepbosshanachan/demohanatyan_model.bmd	M_hanabody	
+model	data/scene/mamma1.szs	/tyuhana/default.bmd	M_tyuhana	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaface	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_kurukuru	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_open	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_harf	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_close	
+model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_anaeye_damage	
+model	data/scene/mamma4.szs	/map/map/pad/monteman_model.bmd	I_momte_man_rgba	
+model	data/scene/mamma4.szs	/mapobj/monteflag.bmd	H_monteflag_16rgb	
+model	data/scene/mare0.szs	/igaiga/igaiga_model1.bmd	Q_pinkigaiga_64x32_s3tc	
+model	data/scene/mareBoss.szs	/bosseel/gold_tooth.bmd	M_GOLD2	
+model	data/scene/mareBoss.szs	/map/map/map.bmd	gate_02	
+model	data/scene/mareBoss.szs	/map/map/map.bmd	gate_01	
+model	data/scene/monte0.szs	/firewanwan/wanwan.bmd	K_wanwan	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_bamboo3	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_monte_nuki	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_kinoko02	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_mare	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_pinna_s2	
+model	data/scene/monte0.szs	/map/map/map.bmd	S_yasi_ha_omote_night	
+model	data/scene/monte0.szs	/map/map/map.bmd	A_mamma_s	
+model	data/scene/monte0.szs	/mapobj/jumpkinoko.bmd	J_kinoko	
+model	data/scene/monte1.szs	/bwanwan/bwanwan_body.bmd	N_bwanwan_me_open	
+model	data/scene/monte1.szs	/bwanwan/bwanwan_body.bmd	N_bwanwan_me_cross	
+model	data/scene/monte1.szs	/bwanwan/bwanwan_body.bmd	N_bwanwan_me_close	
+model	data/scene/monte1.szs	/map/map/map.bmd	A_monte_nuki	
+model	data/scene/monte1.szs	/map/map/map.bmd	A_kinoko02	
+model	data/scene/monte1.szs	/map/map/map.bmd	A_mare	
+model	data/scene/monte1.szs	/map/map/map.bmd	A_pinna_s2	
+model	data/scene/monte1.szs	/map/map/map.bmd	A_mamma_s	
+model	data/scene/option.szs	/mapobj/fileloadblockojama.bmd	F_block_01_3	
+model	data/scene/pinnaBeach0.szs	/map/map/map.bmd	A_sirena_s	
+model	data/scene/pinnaBeach0.szs	/map/map/map.bmd	A_ricco_s	
+model	data/scene/pinnaBeach0.szs	/mapobj/ferriswheel.bmd	L_kanran_white	
+model	data/scene/pinnaBeach0.szs	/mapobj/merry.bmd	L_pina_teppan_16	
+model	data/scene/pinnaBeach0.szs	/mapobj/merry.bmd	L_pina_panel_32	
+model	data/scene/pinnaBeach0.szs	/mapobj/merry.bmd	L_pina_merry_YOSIp_128	
+model	data/scene/pinnaBeach0.szs	/mapobj/merry.bmd	L_pina_merry_YOSIy_128	
+model	data/scene/pinnaBeach0.szs	/mapobj/viking.bmd	B_viking_ss	
+model	data/scene/pinnaBeach2.szs	/tamanoko/tamaflower_model1.bmd	Q_tamaflower	
+model	data/scene/pinnaBeach2.szs	/tamanoko/tamanoko_model1.bmd	Q_tamanoko4_s3tc	
+model	data/scene/pinnaBoss0.szs	/mapobj/gateshell.bmd	L_pina_tail_L_01	
+model	data/scene/pinnaBoss0.szs	/mapobj/gateshell.bmd	L_pina_maregate	
+model	data/scene/pinnaBoss0.szs	/rocket/rocket.bmd	N_pet_body	
+model	data/scene/pinnaBoss0.szs	/tinkoopa/tinkoopa_body.bmd	N_tinkoopa_head5	
+model	data/scene/pinnaBoss0.szs	/tinkoopa/tinkoopa_breast.bmd	N_tinkoopa_head_50	
+model	data/scene/pinnaParco0.szs	/kug/default.bmd	H_kg_main_s3tc	
+model	data/scene/pinnaParco0.szs	/map/map/gate/05_gate04monte.bmd	P_gate_spec2	
+model	data/scene/pinnaParco2.szs	/mapobj/amiking_model1.bmd	Q_kingaminoko_s3tc	
+model	data/scene/ricco0.szs	/map/map/map.bmd	A_sirena_s2	
+model	data/scene/ricco0.szs	/mapobj/crane180scene1.bmd	A_hasira05	
+model	data/scene/ricco1.szs	/mapobj/riccoship.bmd	A_ship01	
+model	data/scene/ricco1.szs	/mapobj/riccostand.bmd	A_riccoStand02	
+model	data/scene/ricco1.szs	/mapobj/riccostreetstall.bmd	A_yatai	
+model	data/scene/rico_ex0.szs	/map/map/map.bmd	A_heban	
+model	data/scene/rico_ex0.szs	/map/map/map.bmd	B_ikaraceSteel	
+model	data/scene/rico_ex0.szs	/map/map/map.bmd	B_ikarase_hotisideS	
+model	data/scene/rico_ex0.szs	/map/map/map.bmd	B_ikaRaceKabe	
+model	data/scene/rico_ex0.szs	/map/map/map.bmd	B_FlagGoal	
+model	data/scene/sirena0.szs	/map/map/map.bmd	D_circle20_tail_sire	
+model	data/scene/sirena0.szs	/map/map/map.bmd	D_WoodyWhite_sire	
+model	data/scene/sirena0.szs	/mapobj/sirenashop.bmd	D_WoodyWhitePillar	
+#
+# Left out after review: the upscale looked worse than the original (realesrgan-x4plus-anime
+# flattens grain and loses faint detail). Another model or a hand edit may do better.
+# S_moon64 (monte0 sky.bmd) is left out too: the upscale adds a dark rim to the moon.
+# model	data/scene/bia_ex1.szs	/mapobj/normalblock.bmd	B_nomalBlock2	grain comes out flat
+# model	data/scene/delfino0.szs	/map/map/map.bmd	L_teresa_gnya	its faint glows disappear
+# model	data/scene/dolpic0.szs	/mapobj/super_rock.bmd	Q_superRock2_s3tc	grainy rock comes out flat
+# model	data/scene/dolpic1.szs	/map/map/map.bmd	I_king_rgb	grain comes out flat
+# model	data/scene/dolpic9.szs	/map/map/map.bmd	A_cannon	its marks disappear
+# model	data/scene/dolpic_ex3.szs	/map/map/map.bmd	B_Sougen_kusanone	grass grain comes out flat
+# model	data/scene/mam_ex1.szs	/mapobj/sandbirdblock.bmd	B_SandBirdBlock	grainy sand comes out flat
+# model	data/scene/mamma0.szs	/map/map/reflectparts.bmd	D_sunaRef	grainy sand comes out flat
+# model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_ikari2	its soft shading changes shape
+# model	data/scene/mamma2.szs	/bosshanachan/hanahead_model.bmd	M_hanaeye_ikari1	its soft shading changes shape
+# model	data/scene/mare5.szs	/map/map/mare5exgate.bmd	mare_gate	blurry painting turns into invented shapes
+# model	data/scene/monte0.szs	/map/map/map.bmd	S_soko1_mip	grain comes out flat
+# model	data/scene/monte0.szs	/map/map/map.bmd	A_suna_sire02m4	grainy sand comes out flat
+# model	data/scene/monte0.szs	/map/map/map.bmd	A_bamboo	its purple edges turn into bright fringes
+# model	data/scene/monte1.szs	/map/map/map.bmd	S_soko1_mip	grain comes out flat
+# model	data/scene/pinnaBoss0.szs	/map/map/map.bmd	L_pina_conkuri_t01	concrete grain comes out flat
+# model	data/scene/sirena0.szs	/map/map/map.bmd	D_WallHotel	plaster grain comes out flat

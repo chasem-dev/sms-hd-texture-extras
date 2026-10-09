@@ -108,7 +108,7 @@ class Scan:
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("disc")
-    ap.add_argument("packs", nargs="+")
+    ap.add_argument("packs", nargs="*", help="texture pack folders (none: list every texture)")
     ap.add_argument("--csv", help="write the missing textures here")
     ap.add_argument("--png", help="decode the missing textures into this folder")
     args = ap.parse_args()
