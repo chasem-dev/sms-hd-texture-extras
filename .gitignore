@@ -3,3 +3,4 @@ tools/realesrgan/
 __pycache__/
 dist/
 originals/
+languages/

@@ -62,6 +62,29 @@ A rebuild takes about five minutes on a GTX 1060.
 3. Run `make_textures.py`, look at its `previews/`, and play the place it shows up in. If the upscale looks worse than the original, move the line to the left-out list at the end of `TEXTURES.tsv` with the reason.
 4. Bump `VERSION`, run `package.py`, and publish: `gh release create v<VERSION> dist/*.zip`. The PC port's `tools/mods/get.py` pins the release's URL, size and MD5.
 
+## Language packs
+
+The North American disc is English only; the European release (GMSP01) adds French, German, Spanish and Italian.
+A language pack holds one of those languages' text, menus and title screen from the European disc, for the PC port playing the North American one: in the port, `python3 tools/mods/get.py language fr` installs the French pack and `language = fr` in `settings.txt` plays in it (`de`, `es`, `it` for the others); SMS Launcher does both from its **Language** setting.
+They are published as this repository's `languages-v<version>` releases, separate from the textures'.
+
+Making them takes both discs (ISO/GCM) and Python 3:
+
+```sh
+python3 tools/make_language_packs.py "Sunshine (Europe).iso" "Sunshine (USA).iso" languages/   # about two minutes
+python3 tools/package_languages.py languages/   # dist/sms-language-<lang>-<LANGUAGES_VERSION>.zip and dist/language-packs.json
+gh release create languages-v$(cat LANGUAGES_VERSION) dist/sms-language-*.zip
+```
+
+`dist/language-packs.json` is the pin the port's `tools/mods/language-packs.json` takes.
+For each language, `make_language_packs.py` writes:
+
+- the European `game_6`, `guide`, `select`, `subtitle` and `endsave` archives under the North American names (HUD, guide, episode select, cutscene subtitles, ending);
+- the North American `option.szs` with the language's memory card text, title and score screens, the words of the file select and options menus (their boxes widened to the European pictures) and the options help line;
+- the files the port puts inside the North American archives as they load: the text in `common.szs`, the font in `nintendo.szs`, and each stage's dialogue.
+
+The European text is kept word for word, with each message's attributes from the North American file: Europe moved the byte that picks a character's voice in its stage and system messages, and added one help line to the memory card text.
+
 ## Credits
 
 The original textures are Nintendo's; these are upscales of them, for use with your own copy of the game.
