@@ -85,6 +85,17 @@ For each language, `make_language_packs.py` writes:
 
 The European text is kept word for word, with each message's attributes from the North American file: Europe moved the byte that picks a character's voice in its stage and system messages, and added one help line to the memory card text.
 
+### Translation kit
+
+For a new, unofficial translation, `tools/make_translation_kit.py` gathers what translators need from the North American disc into one zip: every line of the game's text once, in English, as a gettext template (`text.pot`, about 1,570 lines, with where each appears and the game's control codes and button icons as readable `{tags}`), every picture with words in it as PNG with a list of what each shows, the official translations as `reference/*.po`, and a README for translators.
+
+```sh
+python3 tools/make_translation_kit.py "Sunshine (USA).iso" dist/sms-translation-kit-$(cat LANGUAGES_VERSION).zip --reference languages/
+gh release create translation-kit-v<version> dist/sms-translation-kit-*.zip
+```
+
+A finished translation is that folder with `text.po` and any redrawn pictures; turning one into a language pack is the next step.
+
 ## Credits
 
 The original textures are Nintendo's; these are upscales of them, for use with your own copy of the game.
