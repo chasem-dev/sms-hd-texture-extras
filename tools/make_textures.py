@@ -13,7 +13,8 @@ Real-ESRGAN's realesrgan-x4plus-anime model, at the UHD pack's scales:
          its edges so tiling textures stay seamless
 (at most 2048 pixels a side). Each is written to textures/GMS/<kind>/<archive>/
 under its Dolphin name, and previews/<archive>.png shows them before and after.
-Textures with no transparency stay fully opaque.
+Textures with no transparency stay fully opaque, and fully transparent pixels
+away from visible ones keep the disc's colour, which some materials draw.
 
 Needs Python 3 with Pillow and a GPU with Vulkan. --realesrgan names another
 realesrgan-ncnn-vulkan (https://github.com/xinntao/Real-ESRGAN/releases,
@@ -71,6 +72,21 @@ def bleed(img):
         filled = ImageChops.lighter(filled, new)
         radius *= 2
     return Image.merge("RGB", rgb)
+
+
+def keep_hidden(hd, orig):
+    """hd with the disc's colour back in its fully transparent pixels that
+    touch no visible one. Some materials draw a texture's colour without its
+    transparency (the Boo block body reads the white top row of its eye
+    texture), so that colour is part of the look; the pixels next to visible
+    ones keep bleed()'s colour, so filtering still draws no dark fringes."""
+    *rgb, a = hd.split()
+    near = a.point(lambda v: 255 if v else 0).filter(ImageFilter.MaxFilter(3))
+    hidden = ImageChops.invert(near)
+    if hidden.getextrema()[1] == 0:
+        return hd
+    disc = orig.convert("RGB").resize(hd.size, Image.NEAREST)
+    return Image.merge("RGBA", (*Image.composite(disc, Image.merge("RGB", rgb), hidden).split(), a))
 
 
 def padded(img, kind):
@@ -170,6 +186,8 @@ def main():
             w, h = j["orig"].size
             p = j["pad"] * f
             hd = big.crop((p, p, p + w * f, p + h * f)).resize((w * j["scale"], h * j["scale"]), Image.LANCZOS)
+            if not j["opaque"]:
+                hd = keep_hidden(hd, j["orig"])
             out = os.path.join(out_root, FOLDER[j["kind"]], j["stem"], j["name"] + ".png")
             os.makedirs(os.path.dirname(out), exist_ok=True)
             hd.save(out, optimize=True)
