@@ -94,7 +94,16 @@ python3 tools/make_translation_kit.py "Sunshine (USA).iso" dist/sms-translation-
 gh release create translation-kit-v<version> dist/sms-translation-kit-*.zip
 ```
 
-A finished translation is that folder with `text.po` and any redrawn pictures; turning one into a language pack is the next step.
+A finished translation is that folder with `text.po` (and any redrawn pictures, not yet used). `tools/make_translation_pack.py` turns the `.po` into a language pack:
+
+```sh
+python3 tools/make_translation_pack.py "Sunshine (USA).iso" text.po pl languages/   # languages/pl/files/...
+```
+
+Each text file the translation changes is rebuilt from the North American one, keeping every message's settings (voice, box style), as a file the port puts inside that archive while it loads; untranslated lines and all pictures stay English.
+Letters the game's fonts lack are drawn into both text fonts from their own glyphs (`tools/extra_letters.py`; Polish's ą ć ę ł ń ś ź ż so far), and the text is encoded to match; any other missing letter stops the build with a list of them.
+In the port, use the pack as a mod (`mod = /path/to/languages/pl` in `settings.txt`) until its language is one the `language` setting knows.
+Converting the official French reference back gives the official French text for every line, except where the North American game shares one English line between places that Europe translated differently (the kit keeps one translation per English line).
 
 ## Credits
 
