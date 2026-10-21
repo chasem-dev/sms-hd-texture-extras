@@ -105,8 +105,24 @@ Letters the game's fonts lack are drawn into both text fonts from their own glyp
 In the port, use the pack as a mod (`mod = /path/to/languages/pl` in `settings.txt`) until its language is one the `language` setting knows.
 Converting the official French reference back gives the official French text for every line, except where the North American game shares one English line between places that Europe translated differently (the kit keeps one translation per English line).
 
+## Super Mario Eclipse radar maps
+
+The PC port's radar draws a top-down picture of the stage around Mario, matched to the stage by its collision.
+The retail game's are in the port; [Super Mario Eclipse](https://github.com/JoshuaMKW/Super-Mario-Eclipse)'s own stages, and the retail ones it rebuilt, have theirs here, as `eclipse-maps-v<version>` releases: 106 maps, installed by the port's `python3 tools/mods/get.py eclipse` (with Eclipse) or `get.py eclipse-maps`, into `mods/maps/eclipse`, and by SMS Launcher when Eclipse and the radar are on.
+They are made from the Eclipse disc (`GMSE04`, as `get.py eclipse` patches it) with the port's map tool:
+
+```sh
+python3 tools/radar/gen_maps.py --disc "Super Mario Eclipse v1.1.0.iso" --out eclipse-maps \
+    --except assets/maps/maps.txt                          # in the port; an hour or two
+python3 tools/package_eclipse_maps.py eclipse-maps dist/sms-eclipse-maps-1.0.0.zip
+gh release create eclipse-maps-v1.0.0 dist/sms-eclipse-maps-1.0.0.zip
+```
+
+The port pins the release in `tools/mods/eclipse-maps.json` (URL, size, MD5).
+
 ## Credits
 
 The original textures are Nintendo's; these are upscales of them, for use with your own copy of the game.
 Upscaling by [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) (Xintao Wang et al., BSD 3-Clause).
 The UHD pack these extend is by qashto and razius.
+The Eclipse radar maps are pictures of Super Mario Eclipse's stages, by the Eclipse Team (CC BY-NC-ND 4.0), for use with the mod.
