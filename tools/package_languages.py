@@ -16,7 +16,7 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAMES = {'fr': 'Français', 'de': 'Deutsch', 'es': 'Español', 'it': 'Italiano', 'pl': 'Polski'}
+NAMES = {'fr': 'Français', 'de': 'Deutsch', 'es': 'Español', 'it': 'Italiano', 'pl': 'Polski', 'pt-br': 'Português (Brasil)'}
 REPO = 'https://github.com/chasem-dev/sms-hd-texture-extras'
 
 

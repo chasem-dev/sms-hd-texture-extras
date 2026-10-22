@@ -1,0 +1,58 @@
+{
+  "_about": "Fixes for the Brazilian Portuguese translation (Traduções PKG) of the European disc in Super Mario 3D All-Stars, which replaced its Spanish, for tools/make_disc_translation_pack.py: the lines 3D All-Stars reworded for the Switch's controls, back to the GameCube's buttons; Spanish ¡ dropped; the Noki Bay episode name and the Delfino Plaza line the translation left out (the later ones were one early); Pianta Village 7's text, which the translation put in Noki Bay's file (mare6), whose four lines come from its other stages; and the Ricco Harbor launches whose timing codes became text. The eight lines it left in Spanish (Pinna Park 1, Ricco Harbor 8, Hotel Delfino (delfino1) and Pianta Village 3), which it translated nowhere else, are this file's own translations.",
+  "remove": "¡¿",
+  "messages": {
+    "common/balloon 4": "Tente\nagarrar o\ntentáculo\npressionando\n{B}.",
+    "common/balloon 54": "Encha-o onde\nquer que\nhaja água.\nÉ só\npressionar {R}.",
+    "common/balloon 56": "Incline o *\npara trás e\npressione {A}\npara dar um\nsalto mortal\npara trás!",
+    "common/balloon 68": "Pressione {Y}\npara ver\no que você\ntem à sua frente\nà vontade!",
+    "common/balloon 72": null,
+    "common/balloon 74": "Se você\npressionar {R}\naté o fim,\nficará imóvel\nenquanto\njoga água.",
+    "common/balloon 84": "Se quiser\njogar água\ndurante\na corrida,\npressione {R}\nde leve.",
+    "common/balloon 86": "Limpe aquele\n\"M\" para\npraticar um\npouco. Pressione\n{R} para\njogar água.",
+    "common/savemessage 26": "Salvando o arquivo...\nNão toque no Memory Card\nnem no Botão POWER.",
+    "option/loadmessage 10": "Copiando o arquivo...\nNão toque no Memory Card\nnem no Botão POWER.",
+    "option/loadmessage 12": "Apagando o arquivo...\nNão toque no Memory Card\nnem no Botão POWER.",
+    "option/loadmessage 29": "Salvando o jogo...\nNão toque no Memory Card\nnem no Botão POWER.",
+    "subtitle/nozurub 2": "Ao pressionar {R} até o fim, você\npode parar e soltar água.",
+    "subtitle/nozurub 6": "Depois, pressione {R} para planar\npor um breve período de tempo.",
+    "subtitle/nozurub 8": "Para enchê-lo, entre na água\ne pressione {R}.",
+    "subtitle/nozurub 9": null,
+    "scene/airport0 5": null,
+    "scene/airport1 5": null,
+    "scene/mamma0 7": "Olha! Parece que\ncaiu uma moeda\nbem debaixo da Cabana!\nSe for lá embaixo\npoderá observar melhor,\npressione {Y}.",
+    "scene/ricco1 2": "{close}Você gostaria\nde ir? Sem problemas!\nLá vaaaai!{speed:80} {speed:0}",
+    "scene/ricco2 2": "{close}Você de novo?!\n\n\nBem, acho que já\nposso te enviar ao outro\nlado. Vamos ver...\nLá vaaaai!!{speed:50} {speed:0}",
+    "scene/ricco5 2": "{close}Estou melhorando\na cada dia! Não acha?\nPegue isto!{speed:80} {speed:0}",
+    "scene/ricco5 3": "{close}Você não seria capaz de\natirar nem meio\nmetro. Aprenda, cara!\nLá vaiiii!{speed:50} {speed:0}",
+    "scene/sirena4 7": "Quando você se sentar\ne contemplar o mar,\nvocê verá tudo diferente...\nOs problemas\ndo dia a dia\nparecerão pequenos...",
+    "scene/delfino1 10": "Aaaaaaaaaaaaaaaah!",
+    "scene/monte3 6": "Rápido! Rápido!",
+    "scene/pinnaParco0 0": "Oba! Um\nvisitante! He, he!\nSeja bem-vindo!!\nSou o diretor do\nParque Mamma-mia!\nÉ um prazer!\nVem pouca gente\npor culpa desses\nmalditos Koopas...\nPara falar a verdade,\nos negócios não vão\nnada bem...\nNão temos nem\numa atração principal\npara nos salvar!",
+    "scene/pinnaParco0 6": "Hã? Passou\nalguma coisa correndo\nagora mesmo?",
+    "scene/pinnaParco0 7": "Fiuuuuuu! Quem\nera aquele bólido?",
+    "scene/pinnaParco0 10": "Uau! Tem uma\nMontanha-Russa e dois\nNavios Piratas!!",
+    "scene/ricco8 3": "Está vendo o meu\nirmão mais velho,\nali?\nEle tem treinado\nmuito arremesso\nde gente.\nAinda não é um\nmestre, mas tem\nmuito talento!",
+    "scene/ricco8 6": "Uaaaaaaaau!\nO que é isso?...",
+    "scene/ricco8 7": "Me disseram que, se\nvocê girar a hélice,\no submarino sobe...\nMas como é que\nse faz isso?\nVocê não faz\nideia, né?"
+  },
+  "insert": {
+    "common/scenarioname": {
+      "26": "Fóreston desafia você a nadar!"
+    },
+    "scene/dolpic6": {
+      "6": "Há muito tempo,\nhavia Yoshis vivendo\nnesta ilha..."
+    }
+  },
+  "source": {
+    "scene/monte6": "scene/mare6"
+  },
+  "files": {
+    "scene/mare6": [
+      "Ele é seu parente?\nQue família mais\nestranha você tem!",
+      "Te devo uma, Mario!\nMeu negócio está\ncrescendo muito!\nNão hesite em usar\nos meus barcos quando\nquiser. É grátis!\nMas eles não têm remos,\nentão você terá que\nusar a FLUDD.",
+      "ALUGUEL DE\nBARCOS\n-90.000 MOEDAS-\nDiversão com\nLETRAS MAIÚSCULAS!\nSuba a bordo!\n",
+      "Brrrrrrrr!\nNão vou esquecer disso!"
+    ]
+  }
+}

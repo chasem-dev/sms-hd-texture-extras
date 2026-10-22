@@ -65,6 +65,7 @@ A rebuild takes about five minutes on a GTX 1060.
 ## Language packs
 
 The North American disc is English only; the European release (GMSP01) adds French, German, Spanish and Italian.
+Community translations add Polish and Brazilian Portuguese (`pl`, `pt-br`; see below).
 A language pack holds one of those languages' text, menus and title screen from the European disc, for the PC port playing the North American one: in the port, `python3 tools/mods/get.py language fr` installs the French pack and `language = fr` in `settings.txt` plays in it (`de`, `es`, `it` for the others); SMS Launcher does both from its **Language** setting.
 They are published as this repository's `languages-v<version>` releases, separate from the textures'.
 
@@ -104,6 +105,18 @@ Each text file the translation changes is rebuilt from the North American one, k
 Letters the game's fonts lack are drawn into both text fonts from their own glyphs (`tools/extra_letters.py`; Polish's ą ć ę ł ń ś ź ż so far), and the text is encoded to match; any other missing letter stops the build with a list of them.
 In the port, use the pack as a mod (`mod = /path/to/languages/pl` in `settings.txt`) until its language is one the `language` setting knows.
 Converting the official French reference back gives the official French text for every line, except where the North American game shares one English line between places that Europe translated differently (the kit keeps one translation per English line).
+
+### Translations made on a European disc
+
+Some fan translations replace one of the European disc's languages instead, like the Brazilian Portuguese one for Super Mario 3D All-Stars, which takes the Spanish slot of the European disc inside it. `tools/make_disc_translation_pack.py` turns such a disc into a language pack:
+
+```sh
+python3 tools/make_disc_translation_pack.py "Sunshine (Europe).iso" "Sunshine (USA).iso" translated.gcm es pt-br languages/ translations/pt-br.json   # about eight minutes
+```
+
+The pack is the retail European disc's language with the translation's text and the pictures it redrew (those whose pixels differ from the retail ones), built as `make_language_packs.py` builds the official ones. Layouts, subtitle timings and fonts stay the retail disc's, so a 3D All-Stars translation fits the GameCube game. A line the translation left untranslated takes its translation of the same line elsewhere on the disc.
+Each text file is checked against the retail one: the same number of messages, the same ones empty, the same control codes, and none of the lines 3D All-Stars reworded for the Switch's buttons. What fails is put right in a fixes file (`translations/<code>.json`, described in the script); the build stops naming each problem, and lists the lines still in the replaced language at the end.
+`translations/pt-br.json` has the Portuguese translation's: its Switch-button lines rewritten for the GameCube's, the Spanish ¡ dropped, an episode name and a Delfino Plaza line it left out (each later one was one place early), a stage's text it filed under another stage, timing codes that had become text, and eight lines it left in Spanish.
 
 ## Super Mario Eclipse radar maps
 

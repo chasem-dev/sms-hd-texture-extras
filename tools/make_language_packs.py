@@ -463,7 +463,11 @@ def main():
     for lang in langs:
         if lang not in LANGS:
             sys.exit('unknown language %s (use %s)' % (lang, ', '.join(LANGS)))
+    build(pal, us, out, {lang: LANGS[lang] for lang in langs})
 
+
+def build(pal, us, out, packs):
+    """Write OUT/<code>/files/... for each {pack code: European disc suffix}."""
     def put(lang, rel, blob):
         path = os.path.join(out, lang, 'files', rel)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -474,8 +478,7 @@ def main():
     us_option = yaz0_decode(us.read('/data/option.szs'))
     pal_option = yaz0_decode(pal.read('/data/option.szs'))
     pal_font = Rarc(yaz0_decode(pal.read('/data/nintendo.szs'))).get('/font/standard_fontex.bfn')
-    for lang in langs:
-        lx = LANGS[lang]
+    for lang, lx in packs.items():
         for n in WHOLE:
             src = pal.read('/data/%s_%s.szs' % (n, lx))
             if n in ('game_6', 'guide') and struct.unpack('>I', src[4:8])[0] > 0x64000:
@@ -496,12 +499,12 @@ def main():
         if not u.has('/map/message.bmg'):
             continue
         pv = Rarc(yaz0_decode(pal.read(p)))
-        for lang in langs:
-            msg = convert_bmg(pv.get('/map/message_%s.bmg' % LANGS[lang]), u.get('/map/message.bmg'), p)
+        for lang, lx in packs.items():
+            msg = convert_bmg(pv.get('/map/message_%s.bmg' % lx), u.get('/map/message.bmg'), p)
             put(lang, 'data/scene/%s/map/message.bmg' % os.path.basename(p), msg)
         print('\rstages: %d/%d' % (i + 1, len(scenes)), end='', flush=True)
     print()
-    for lang in langs:
+    for lang in packs:
         print('%s -> %s' % (lang, os.path.join(out, lang)))
 
 
