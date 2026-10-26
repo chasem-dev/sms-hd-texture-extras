@@ -139,9 +139,28 @@ gh release create eclipse-maps-v1.0.0 dist/sms-eclipse-maps-1.0.0.zip
 
 The port pins the release in `tools/mods/eclipse-maps.json` (URL, size, MD5).
 
+## HD cutscenes
+
+The 21 movies of the North American disc in HD, as MP4s for the PC port: the AI-enhanced frames of the port's [HD cutscenes](https://github.com/chasem-dev/sms-pc-port/blob/main/docs/HD-CUTSCENES.md) (upscaled 3× with Real-ESRGAN's `realesr-animevideov3`: 1920×960, 1920×1344 for the taller movies, 384×432 for the plaza's portal), every frame at the original rate, as AV1 video, with each movie's audio as Opus: the stereo mix, and the mix the game plays with Sound set to Surround (16 movies have one of their own).
+They take 0.88 GB, against 5.4 GB as THPs, and the port decodes them itself (dav1d and Opus built in), through the game's own movie player: subtitles in every language, skipping, rumble and the volume fade are unchanged.
+They are published as this repository's `hd-cutscenes-v<version>` releases, one MP4 per movie; the port pins the release in `tools/media/cutscene-release.json` (URL, size and SHA-256 of each), and its installer (and SMS Launcher's **HD cutscenes** setting) puts them in `mods/hd-cutscenes/files/data/`.
+
+They are made in the port from the HD THPs, which the port's earlier release rebuilds from your disc (`tools/media/install_cutscenes.py --manifest tools/media/cutscene-release-thp.json`), with FFmpeg (libsvtav1 and libopus):
+
+```sh
+for f in mods/hd-cutscenes/files/data/*.thp; do
+  python3 tools/media/cutscenes.py mp4 --input "$f" --output "hd-cutscenes-mp4/$(basename "${f%.thp}").mp4"
+done   # AV1 at CRF 24 (preset 6), Opus at 128 kb/s; the audio decoded from the THP as the game decodes it
+python3 tools/media/build_cutscene_release.py --mp4 hd-cutscenes-mp4 --out tools/media \
+    --release hd-cutscenes-v$(cat CUTSCENES_VERSION) \
+    --url-base https://github.com/chasem-dev/sms-hd-texture-extras/releases/download/hd-cutscenes-v$(cat CUTSCENES_VERSION)
+gh release create hd-cutscenes-v$(cat CUTSCENES_VERSION) hd-cutscenes-mp4/*.mp4   # from this repository
+```
+
 ## Credits
 
 The original textures are Nintendo's; these are upscales of them, for use with your own copy of the game.
 Upscaling by [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN) (Xintao Wang et al., BSD 3-Clause).
 The UHD pack these extend is by qashto and razius.
+The HD cutscenes are AI upscales of the game's movies (reconstructed detail, not new renders), with the movies' own audio, for use with your own copy of the game.
 The Eclipse radar maps are pictures of Super Mario Eclipse's stages, by the Eclipse Team (CC BY-NC-ND 4.0), for use with the mod.
