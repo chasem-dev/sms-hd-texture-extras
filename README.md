@@ -104,6 +104,12 @@ python3 tools/make_translation_pack.py "Sunshine (USA).iso" text.po pl languages
 Each text file the translation changes is rebuilt from the North American one, keeping every message's settings (voice, box style), as a file the port puts inside that archive while it loads; untranslated lines and all pictures stay English.
 Letters the game's fonts lack are drawn into both text fonts from their own glyphs (`tools/extra_letters.py`; Polish's ą ć ę ł ń ś ź ż so far), and the text is encoded to match; any other missing letter stops the build with a list of them.
 In the port, use the pack as a mod (`mod = /path/to/languages/pl` in `settings.txt`) until its language is one the `language` setting knows.
+The Polish pack is built from `translations/pl.po`. A translator's compiled `.mo` has no line references, so put its text into that file before building:
+
+```sh
+msgunfmt pl_PL.mo -o new.po && msgmerge --no-fuzzy-matching --no-wrap new.po translations/pl.po -o translations/pl.po
+```
+
 Converting the official French reference back gives the official French text for every line, except where the North American game shares one English line between places that Europe translated differently (the kit keeps one translation per English line).
 
 ### Translations made on a European disc
