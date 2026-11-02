@@ -126,8 +126,8 @@ Each text file is checked against the retail one: the same number of messages, t
 
 ## Super Mario Eclipse radar maps
 
-The PC port's radar draws a top-down picture of the stage around Mario, matched to the stage by its collision.
-The retail game's are in the port; [Super Mario Eclipse](https://github.com/JoshuaMKW/Super-Mario-Eclipse)'s own stages, and the retail ones it rebuilt, have theirs here, as `eclipse-maps-v<version>` releases: 106 maps, installed by the port's `python3 tools/mods/get.py eclipse` (with Eclipse) or `get.py eclipse-maps`, into `mods/maps/eclipse`, and by SMS Launcher when Eclipse and the radar are on.
+The PC port's radar draws a top-down picture of the stage around Mario, matched to the stage by its collision (and by its scene where stages share one: secret courses are blocks placed on the same stub collision).
+The retail game's are in the port; [Super Mario Eclipse](https://github.com/JoshuaMKW/Super-Mario-Eclipse)'s own stages, and the retail ones it rebuilt, have theirs here, as `eclipse-maps-v<version>` releases: 111 maps, installed by the port's `python3 tools/mods/get.py eclipse` (with Eclipse) or `get.py eclipse-maps`, into `mods/maps/eclipse`, and by SMS Launcher when Eclipse and the radar are on.
 They are made from the Eclipse disc (`GMSE04`, as `get.py eclipse` patches it) with the port's map tool:
 
 ```sh
@@ -135,6 +135,16 @@ python3 tools/radar/gen_maps.py --disc "Super Mario Eclipse v1.1.0.iso" --out ec
     --except assets/maps/maps.txt                          # in the port; an hour or two
 python3 tools/package_eclipse_maps.py eclipse-maps dist/sms-eclipse-maps-1.0.0.zip
 gh release create eclipse-maps-v1.0.0 dist/sms-eclipse-maps-1.0.0.zip
+```
+
+An update that adds a few stages makes only those, into the last release's files, and copies the rest from its zip as they are (v1.0.1 added the five secret courses on a retail course's collision, which v1.0.0's `--except` left out by key: `lanciapeaks_ex0`, `ertoRock_ex0`, `peachCastle_ex11`, `peachCastle_ex20`, `peachCastle_ex24`):
+
+```sh
+unzip -j sms-eclipse-maps-1.0.0.zip -d eclipse-maps
+python3 tools/radar/gen_maps.py --disc "Super Mario Eclipse v1.1.0.iso" --out eclipse-maps \
+    --except assets/maps/maps.txt --only lanciapeaks_ex0,ertoRock_ex0,peachCastle_ex11,peachCastle_ex20,peachCastle_ex24
+python3 tools/package_eclipse_maps.py eclipse-maps dist/sms-eclipse-maps-1.0.1.zip --previous sms-eclipse-maps-1.0.0.zip
+gh release create eclipse-maps-v1.0.1 dist/sms-eclipse-maps-1.0.1.zip
 ```
 
 The port pins the release in `tools/mods/eclipse-maps.json` (URL, size, MD5).
